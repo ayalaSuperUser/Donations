@@ -1,0 +1,25 @@
+ <div *ngFor="let donation of donations" class="item p-1 m-1">
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                <div class="d-flex flex-row align-items-center">
+                    <span class="name m-1">{{donation.entityName}}</span>
+                    <span class="amount m-1">{{donation.amount}} &#8362;</span>
+                </div>
+            </mat-panel-title>
+            <mat-panel-description>
+              <div style="pointer-events: all;">
+                <span class="material-icons" >edit</span>
+                <span class="material-icons" (click)="$event.stopPropagation();delete(donation.id);">delete</span>
+              </div>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <app-add-edit [id]="donation.id"></app-add-edit>
+        </mat-expansion-panel>
+      </mat-accordion>
+ </div>
+ <a type="button" routerLink="add" class="btn btn-primary m-1">
+        הוספת תרומה
+ </a>
+ 

@@ -1,0 +1,82 @@
+<h1 *ngIf="isAddMode" class="title">הוספת דיווח על עמותה</h1>
+<form [formGroup]="donationForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group m-1" [ngClass]="isAddMode ? 'w-30' : 'w-100'">
+            <label>שם הישות המדינית הזרה</label>
+            <input type="text" required formControlName="entityName" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && form['entityName'].errors }">
+            <div *ngIf="form['entityName'].errors" class="invalid-feedback">
+                <div *ngIf="form['entityName'].errors['required']">חובה להזין שם הישות</div>
+                <div *ngIf="form['entityName'].errors?.['pattern']">יש להזין תווים באנגלית ובעברית בלבד</div>
+            </div>
+        </div>
+        <div class="form-group m-1" [ngClass]="isAddMode ? 'w-30' : 'w-100'">
+            <label>סכום התרומה בש"ח</label>
+            <input type="text" required formControlName="amount" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && form['amount'].errors }">
+            <div *ngIf="form['amount'].errors" class="invalid-feedback">
+                <div *ngIf="form['amount'].errors['required']">חובה להזין סכום לתרומה</div>
+                <div *ngIf="form['amount'].errors?.['pattern']">יש להזין ספרות בלבד</div>
+            </div>
+        </div>
+        <div class="form-group w-30 m-1" [ngClass]="isAddMode ? 'w-30' : 'w-100'">
+            <label>סוג הישות המדינית הזרה</label>
+            <select formControlName="entityType" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && form['entityType'].errors }">
+                <option *ngFor="let entity of entities" [value]="entity.id">{{entity.name}}</option>
+            </select>
+            <div *ngIf="form['entityType'].errors" class="invalid-feedback">
+                <div *ngIf="form['entityType'].errors['required']">חובה למלא סוג ישות</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group w-100 m-1">
+            <label>ייעוד התרומה</label>
+            <input type="text" required formControlName="destiny" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && form['destiny'].errors }">
+            <div *ngIf="form['destiny'].errors" class="invalid-feedback">
+                <div *ngIf="form['destiny'].errors['required']">חובה להזין ייעוד התרומה</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group w-100 m-1" >
+            <label>התנאים לתרומה</label>
+            <input type="text" formControlName="conditions" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && form['conditions'].errors }">
+            <div *ngIf="form['conditions'].errors" class="invalid-feedback">
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group m-1" [ngClass]="isAddMode ? 'w-30' : 'w-100'">
+            <label>סוג המטבע</label>
+            <select formControlName="coin" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && form['coin'].errors }">
+                <option *ngFor="let coin of coins" [value]="coin.id">{{coin.name}}</option>
+            </select>
+            <div *ngIf="form['coin'].errors" class="invalid-feedback">
+                <div *ngIf="form['coin'].errors['required']">חובה למלא סוג מטבע</div>
+            </div>
+        </div>
+        <div class="form-group w-30 m-1" [ngClass]="isAddMode ? 'w-30' : 'w-100'" >
+            <label>שער ההמרה</label>
+            <input type="text" formControlName="exchangeRate" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && form['exchangeRate'].errors }">
+                <div *ngIf="form['exchangeRate'].errors" class="invalid-feedback">
+                    <div *ngIf="form['exchangeRate'].errors['required']">חובה להזין שער ההמרה</div>
+                    <div *ngIf="form['exchangeRate'].errors?.['pattern']">יש להזין ספרות בלבד</div>
+                </div>
+        </div>
+</div>
+    <div class="form-group d-flex flex-row justify-content-end">
+        <button type="button" [disabled]="loading" class="btn btn-outline-primary m-1" (click)="donationForm.reset()">
+            ניקוי
+        </button>
+        <button type="submit" [disabled]="loading" class="btn btn-primary m-1">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            שמירה
+        </button>
+    </div>
+</form>

@@ -1,0 +1,35 @@
+
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: end;
+    align-items: center;
+  }
+  
+  .example-headers-align .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  .name{
+      font-size: 1.2rem;
+      font-weight: bold;
+  }
+
+  .amount{
+    font-size: 1rem;
+  }
+
+  .item{
+      border-width: thin;
+      border-color: black;
+      border-radius: 5px;
+      border-style: solid;
+  }
+
+  .mat-expansion-panel-header:not([aria-disabled=true]) {
+    pointer-events: none;
+}
+
+  .mat-expansion-indicator
+{
+    pointer-events: all;
+}
+

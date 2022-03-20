@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "crjW7QA6q5H0+3VOFo0NNpA4wxmOI96aa5Yd3gV5BW7HE9bw01Cvw9geEsoMZ970d7WfRsxVYSqtL9wu6gGdVQ==",
+  "success": true,
+  "projectFilePath": "C:\\Donations\\server\\donations\\SMTP\\SMTP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ayalak\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
+    "C:\\Users\\ayalak\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ayalak\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\ayalak\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\ayalak\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\ayalak\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

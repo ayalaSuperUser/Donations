@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0BFL5QQLo13wUo1KNiU8F0ZUAwskQTyAhwnbWGSZ2xy+u/W/OBRSd5aUsxeispBiuoRX/1liH52EOJMrgHO8fQ==",
+  "success": true,
+  "projectFilePath": "C:\\Donations\\server\\donations\\donations.DAL\\donations.DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ayalak\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
